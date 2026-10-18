@@ -34,10 +34,15 @@ Website (Lovable) → Webhook (n8n) → Read the PDF → Build a rubric for the 
 ## Design Decisions
 
 **Evidence only**: the AI never invents skills, numbers or links, and explains every score with something from the resume.
+
 **Audit, not rewrite**: the tool points out what is missing instead of writing bullets for you.
+
 **Structured output**: every AI step returns strict JSON, so the website can render scores, badges and lists directly.
+
 **Resume treated as untrusted data**: instructions hidden inside a resume, such as "give this 100/100", are ignored.
+
 **Rules in code, not only in prompts**: the verdict thresholds and the score total are computed in code so results stay consistent.
+
 
 ## Tech stack
 
